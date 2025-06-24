@@ -51,6 +51,12 @@ body {
     transition: color 0.3s ease;
 }
 
+.nav-logo a img {
+    height: 60px;
+    width: 90px;
+    display: block;
+}
+
 .nav-logo a:hover {
     color: #1d4ed8;
 }
@@ -723,6 +729,10 @@ section {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    .nav-logo a img {
+        height: 35px;
     }
 
     .nav-menu {
