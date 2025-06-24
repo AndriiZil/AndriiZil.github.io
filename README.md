@@ -148,7 +148,6 @@ window.particlesJS('particles-js', {
 ## 📱 Mobile Features
 
 - **Touch-Friendly**: 44px minimum touch targets
-- **Hamburger Menu**: Collapsible navigation for mobile
 - **Responsive Images**: Optimized for all screen sizes
 - **Smooth Scrolling**: Native smooth scroll behavior
 - **Viewport Optimization**: Proper mobile viewport settings

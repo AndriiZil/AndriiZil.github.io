@@ -3,14 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Navigation initializing...');
     
     // Get elements
-    const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.nav-list');
     const navLinks = document.querySelectorAll('.nav-link');
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
     
     console.log('Elements found:', {
-        hamburger: !!hamburger,
-        navList: !!navList,
         navLinks: navLinks.length,
         scrollToTopBtn: !!scrollToTopBtn
     });
@@ -37,70 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Hamburger menu functionality
-    if (hamburger && navList) {
-        console.log('Setting up hamburger menu...');
-        
-        hamburger.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            console.log('Hamburger clicked');
-            
-            this.classList.toggle('active');
-            navList.classList.toggle('active');
-            
-            // Add 3D rotation effect
-            if (this.classList.contains('active')) {
-                this.style.transform = 'rotateY(180deg)';
-                navList.style.display = 'flex';
-                setTimeout(() => {
-                    navList.style.transform = 'translateY(0)';
-                }, 10);
-                document.body.style.overflow = 'hidden';
-            } else {
-                this.style.transform = 'rotateY(0deg)';
-                navList.style.transform = 'translateY(-100%)';
-                setTimeout(() => {
-                    navList.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (hamburger.classList.contains('active') && 
-                !hamburger.contains(e.target) && 
-                !navList.contains(e.target)) {
-                console.log('Closing menu - clicked outside');
-                hamburger.classList.remove('active');
-                navList.classList.remove('active');
-                hamburger.style.transform = 'rotateY(0deg)';
-                navList.style.transform = 'translateY(-100%)';
-                setTimeout(() => {
-                    navList.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && hamburger.classList.contains('active')) {
-                console.log('Closing menu - escape key');
-                hamburger.classList.remove('active');
-                navList.classList.remove('active');
-                hamburger.style.transform = 'rotateY(0deg)';
-                navList.style.transform = 'translateY(-100%)';
-                setTimeout(() => {
-                    navList.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = '';
-            }
-        });
-    }
-    
     // Navigation link functionality - SIMPLIFIED
     console.log('Setting up navigation links...');
     navLinks.forEach(link => {
@@ -112,19 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (href && href !== '#' && !href.startsWith('#')) {
                 // External page navigation
                 console.log('Navigating to:', href);
-                
-                // Close mobile menu if open
-                if (hamburger && hamburger.classList.contains('active')) {
-                    console.log('Closing mobile menu before navigation');
-                    hamburger.classList.remove('active');
-                    navList.classList.remove('active');
-                    hamburger.style.transform = 'rotateY(0deg)';
-                    navList.style.transform = 'translateY(-100%)';
-                    setTimeout(() => {
-                        navList.style.display = 'none';
-                    }, 300);
-                    document.body.style.overflow = '';
-                }
                 
                 // Let the default navigation happen - NO preventDefault
                 console.log('Allowing default navigation to:', href);
@@ -138,18 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         behavior: 'smooth',
                         block: 'start'
                     });
-                }
-                
-                // Close mobile menu if open
-                if (hamburger && hamburger.classList.contains('active')) {
-                    hamburger.classList.remove('active');
-                    navList.classList.remove('active');
-                    hamburger.style.transform = 'rotateY(0deg)';
-                    navList.style.transform = 'translateY(-100%)';
-                    setTimeout(() => {
-                        navList.style.display = 'none';
-                    }, 300);
-                    document.body.style.overflow = '';
                 }
             }
         });
@@ -247,16 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Enhanced accessibility features
     function enhanceAccessibility() {
-        if (hamburger) {
-            hamburger.setAttribute('aria-label', 'Toggle navigation menu');
-            hamburger.setAttribute('aria-expanded', 'false');
-            
-            hamburger.addEventListener('click', function() {
-                const isExpanded = this.classList.contains('active');
-                this.setAttribute('aria-expanded', isExpanded.toString());
-            });
-        }
-        
         navLinks.forEach(link => {
             link.addEventListener('focus', function() {
                 this.style.outline = '2px solid var(--blue-600)';

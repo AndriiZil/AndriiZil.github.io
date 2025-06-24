@@ -36,15 +36,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="particles-background" id="particles-js"></div>
+    <div class="morphing-shapes"></div>
+    
+    <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div id="particles-js" class="particles-background" aria-hidden="true"></div>
     
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <ul class="nav-list" id="nav-list">
             <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
             <li><a href="experience.html" class="nav-link">Experience</a></li>
@@ -54,23 +52,86 @@
         </ul>
     </nav>
 
-    <main class="main-content" role="main" id="main-content">
-        <div class="profile-section">
-            <div class="profile-image-container">
-                <img src="assets/profile-photo.svg" alt="Andrii Zilnyk - Senior Software Developer" class="profile-image" loading="eager">
+    <main id="main-content" class="main-content">
+        <section class="profile-section glass-card card-3d interactive card-holographic bg-pattern">
+            <div class="profile-image-container floating">
+                <img src="assets/profile-photo.svg" alt="Andrii Zilnyk" class="profile-image">
             </div>
-            <h1 class="profile-name">Andrii Zilnyk</h1>
-            <h2 class="profile-title">Senior Software Developer</h2>
+            <h1 class="profile-name text-gradient text-glow neon-glow">Andrii Zilnyk</h1>
+            <p class="profile-title text-gradient gradient-animated">Full Stack Developer</p>
             <p class="profile-description">
-                Passionate full-stack engineer with 5+ years of experience building scalable web applications. 
-                Specialized in React, Node.js, TypeScript, and cloud technologies. 
-                Always eager to learn new technologies and solve complex problems.
+                Passionate developer with expertise in modern web technologies. 
+                Creating innovative solutions and building exceptional user experiences.
             </p>
             <div class="profile-actions">
-                <a href="experience.html" class="btn btn-primary">View Experience</a>
-                <a href="contacts.html" class="btn btn-secondary">Get In Touch</a>
+                <a href="experience.html" class="btn btn-primary btn-advanced interactive btn-neon">
+                    View Experience
+                </a>
+                <a href="contacts.html" class="btn btn-secondary btn-advanced interactive btn-neon">
+                    Get in Touch
+                </a>
             </div>
-        </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="page-section scroll-reveal">
+            <h2 class="page-title text-gradient neon-glow">Quick Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card glass-card card-3d interactive floating-delayed card-holographic">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-number text-3d">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card glass-card card-3d interactive floating-slow card-holographic">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number text-3d">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card glass-card card-3d interactive floating card-holographic">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number text-3d">15+</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Skills Preview -->
+        <section class="page-section scroll-reveal">
+            <h2 class="page-title text-gradient neon-glow">Featured Skills</h2>
+            <div class="skills-preview">
+                <span class="skill-tag interactive neon-border" data-tooltip="Advanced proficiency">JavaScript</span>
+                <span class="skill-tag interactive neon-border" data-tooltip="Full-stack development">React</span>
+                <span class="skill-tag interactive neon-border" data-tooltip="Backend expertise">Node.js</span>
+                <span class="skill-tag interactive neon-border" data-tooltip="Database management">MongoDB</span>
+                <span class="skill-tag interactive neon-border" data-tooltip="Cloud platforms">AWS</span>
+                <span class="skill-tag interactive neon-border" data-tooltip="DevOps practices">Docker</span>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="skills.html" class="btn btn-secondary btn-advanced interactive btn-neon">
+                    View All Skills
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Experience Preview -->
+        <section class="page-section scroll-reveal">
+            <h2 class="page-title text-gradient neon-glow">Latest Experience</h2>
+            <div class="experience-preview">
+                <div class="experience-item glass-card card-3d interactive card-holographic">
+                    <h3 class="experience-title text-gradient gradient-animated">Senior Full Stack Developer</h3>
+                    <p class="experience-period">2023 - Present</p>
+                    <p class="experience-description">
+                        Leading development of scalable web applications using modern technologies.
+                        Mentoring junior developers and implementing best practices.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="experience.html" class="btn btn-primary btn-advanced interactive btn-neon">
+                    View Full Experience
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- Scroll to top button -->
@@ -80,8 +141,474 @@
         </svg>
     </button>
 
+    <!-- Notification container -->
+    <div id="notification-container"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+        // Advanced scroll reveal functionality
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-reveal elements
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Advanced particle effects
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 2000);
+
+        // Advanced notification system
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            
+            document.getElementById('notification-container').appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Enhanced interactive effects
+        document.querySelectorAll('.interactive').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Advanced loading states
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            showNotification('Portfolio loaded successfully!', 'success');
+        });
+
+        // Advanced mouse tracking for 3D effects
+        document.addEventListener('mousemove', function(e) {
+            const cards = document.querySelectorAll('.card-3d');
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = rect.left + rect.width / 2;
+                const cardY = rect.top + rect.height / 2;
+                
+                const deltaX = mouseX - cardX;
+                const deltaY = mouseY - cardY;
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                
+                if (distance < 300) {
+                    const intensity = (300 - distance) / 300;
+                    const rotateX = deltaY * 0.01 * intensity;
+                    const rotateY = -deltaX * 0.01 * intensity;
+                    
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                }
+            });
+        });
+
+        // Advanced ripple effects
+        document.querySelectorAll('.btn-advanced').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
+                ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Advanced scroll animations
+        let ticking = false;
+        
+        function updateScrollAnimations() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.profile-section');
+            
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+            
+            ticking = false;
+        }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollAnimations);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+
+        // Advanced keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+        
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Advanced performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    
+                    if (loadTime > 3000) {
+                        showNotification('Page loaded in ' + Math.round(loadTime) + 'ms', 'warning');
+                    }
+                }, 100);
+            });
+        }
+
+        // Advanced accessibility enhancements
+        function enhanceAccessibility() {
+            // Add focus indicators for keyboard navigation
+            document.querySelectorAll('a, button, .interactive').forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.classList.add('focus-visible');
+                });
+                
+                element.addEventListener('blur', function() {
+                    this.classList.remove('focus-visible');
+                });
+            });
+            
+            // Add ARIA labels for interactive elements
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                const tooltip = tag.getAttribute('data-tooltip');
+                if (tooltip) {
+                    tag.setAttribute('aria-label', tooltip);
+                }
+            });
+        }
+        
+        enhanceAccessibility();
+
+        // Advanced error handling
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            showNotification('An error occurred. Please refresh the page.', 'error');
+        });
+
+        // Advanced offline detection
+        window.addEventListener('online', function() {
+            showNotification('You are back online!', 'success');
+        });
+        
+        window.addEventListener('offline', function() {
+            showNotification('You are offline. Some features may not work.', 'warning');
+        });
+
+        // Advanced custom cursor
+        function initCustomCursor() {
+            const cursorDot = document.createElement('div');
+            const cursorRing = document.createElement('div');
+            
+            cursorDot.className = 'cursor-dot';
+            cursorRing.className = 'cursor-ring';
+            
+            document.body.appendChild(cursorDot);
+            document.body.appendChild(cursorRing);
+            
+            let mouseX = 0;
+            let mouseY = 0;
+            let dotX = 0;
+            let dotY = 0;
+            let ringX = 0;
+            let ringY = 0;
+            
+            document.addEventListener('mousemove', function(e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function animateCursor() {
+                // Smooth dot movement
+                dotX += (mouseX - dotX) * 0.1;
+                dotY += (mouseY - dotY) * 0.1;
+                
+                // Smooth ring movement
+                ringX += (mouseX - ringX) * 0.05;
+                ringY += (mouseY - ringY) * 0.05;
+                
+                cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+                cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+                
+                requestAnimationFrame(animateCursor);
+            }
+            
+            animateCursor();
+            
+            // Cursor interactions
+            const interactiveElements = document.querySelectorAll('a, button, .interactive, .card-3d');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    cursorRing.style.transform += ' scale(1.5)';
+                    cursorRing.style.borderColor = 'var(--blue-500)';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    cursorRing.style.transform = cursorRing.style.transform.replace(' scale(1.5)', '');
+                    cursorRing.style.borderColor = 'var(--blue-600)';
+                });
+            });
+        }
+        
+        // Initialize custom cursor on desktop
+        if (window.innerWidth > 768) {
+            initCustomCursor();
+        }
+
+        // Advanced scroll animations
+        function initScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-fade');
+            
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            scrollElements.forEach(el => scrollObserver.observe(el));
+        }
+        
+        initScrollAnimations();
+
+        // Advanced morphing shapes interaction
+        function initMorphingShapes() {
+            const morphingShapes = document.querySelector('.morphing-shapes');
+            if (!morphingShapes) return;
+            
+            document.addEventListener('mousemove', function(e) {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                const shapes = morphingShapes.querySelectorAll('::before, ::after');
+                shapes.forEach((shape, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = mouseX * speed * 50;
+                    const y = mouseY * speed * 50;
+                    
+                    shape.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+        }
+        
+        initMorphingShapes();
+
+        // Advanced loading states
+        function showLoadingState(element) {
+            const loadingSpinner = document.createElement('div');
+            loadingSpinner.className = 'loading-spinner';
+            loadingSpinner.style.position = 'absolute';
+            loadingSpinner.style.top = '50%';
+            loadingSpinner.style.left = '50%';
+            loadingSpinner.style.transform = 'translate(-50%, -50%)';
+            
+            element.style.position = 'relative';
+            element.appendChild(loadingSpinner);
+            
+            return () => {
+                loadingSpinner.remove();
+            };
+        }
+
+        // Advanced hover effects
+        function initAdvancedHoverEffects() {
+            const cards = document.querySelectorAll('.card-holographic');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) rotateX(10deg) rotateY(10deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) rotateX(0deg) rotateY(0deg)';
+                });
+                
+                card.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    this.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+            });
+        }
+        
+        initAdvancedHoverEffects();
+
+        // Advanced text effects
+        function initTextEffects() {
+            const neonTexts = document.querySelectorAll('.neon-glow');
+            
+            neonTexts.forEach(text => {
+                text.addEventListener('mouseenter', function() {
+                    this.style.animationDuration = '0.5s';
+                });
+                
+                text.addEventListener('mouseleave', function() {
+                    this.style.animationDuration = '2s';
+                });
+            });
+        }
+        
+        initTextEffects();
+
+        // Advanced performance monitoring
+        function monitorPerformance() {
+            if ('performance' in window) {
+                const observer = new PerformanceObserver((list) => {
+                    list.getEntries().forEach((entry) => {
+                        if (entry.entryType === 'navigation') {
+                            const loadTime = entry.loadEventEnd - entry.loadEventStart;
+                            const domContentLoaded = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+                            
+                            console.log(`Page load time: ${loadTime}ms`);
+                            console.log(`DOM content loaded: ${domContentLoaded}ms`);
+                            
+                            if (loadTime > 3000) {
+                                showNotification('Page loaded slowly. Consider optimizing images and scripts.', 'warning');
+                            }
+                        }
+                    });
+                });
+                
+                observer.observe({ entryTypes: ['navigation'] });
+            }
+        }
+        
+        monitorPerformance();
+
+        // Advanced accessibility enhancements
+        function enhanceAccessibility() {
+            // Add focus indicators for all interactive elements
+            const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+            
+            focusableElements.forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.classList.add('focus-ring');
+                });
+                
+                element.addEventListener('blur', function() {
+                    this.classList.remove('focus-ring');
+                });
+            });
+            
+            // Add keyboard navigation for cards
+            const cards = document.querySelectorAll('.card-holographic, .stat-card');
+            
+            cards.forEach(card => {
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('role', 'button');
+                
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        enhanceAccessibility();
+
+        // Advanced error boundary
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            showNotification('An error occurred. Please refresh the page.', 'error');
+            
+            // Send error to analytics (if available)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exception', {
+                    description: e.error.message,
+                    fatal: false
+                });
+            }
+        });
+
+        // Advanced network status monitoring
+        function monitorNetworkStatus() {
+            if ('connection' in navigator) {
+                navigator.connection.addEventListener('change', function() {
+                    const connection = navigator.connection;
+                    const effectiveType = connection.effectiveType;
+                    const downlink = connection.downlink;
+                    
+                    if (effectiveType === 'slow-2g' || effectiveType === '2g') {
+                        showNotification('Slow connection detected. Some features may be limited.', 'warning');
+                    }
+                    
+                    console.log(`Connection type: ${effectiveType}, Speed: ${downlink} Mbps`);
+                });
+            }
+        }
+        
+        monitorNetworkStatus();
+    </script>
 </body>
 </html> 
