@@ -3,24 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrii Zilnyk - Senior Software Developer</title>
-    <meta name="description" content="Portfolio of Andrii Zilnyk, Senior Software Developer">
+    <title>Andrii Zilnyk - Senior Software Developer | Full-Stack Engineer</title>
+    <meta name="description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies. View my portfolio, experience, and get in touch for collaboration.">
+    <meta name="keywords" content="software developer, full-stack engineer, React, Node.js, TypeScript, AWS, portfolio">
+    <meta name="author" content="Andrii Zilnyk">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andriizil.github.io/">
+    <meta property="og:title" content="Andrii Zilnyk - Senior Software Developer">
+    <meta property="og:description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies.">
+    <meta property="og:image" content="https://andriizil.github.io/assets/profile-photo.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://andriizil.github.io/">
+    <meta property="twitter:title" content="Andrii Zilnyk - Senior Software Developer">
+    <meta property="twitter:description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies.">
+    <meta property="twitter:image" content="https://andriizil.github.io/assets/profile-photo.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg">
+    <link rel="apple-touch-icon" href="assets/profile-photo.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js" class="particles-background"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="particles-js" class="particles-background" aria-hidden="true"></div>
     
-    <nav class="navbar">
-        <button class="hamburger" id="hamburger">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <ul class="nav-list" id="nav-list">
-            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
             <li><a href="experience.html" class="nav-link">Experience</a></li>
             <li><a href="skills.html" class="nav-link">Skills</a></li>
             <li><a href="certifications.html" class="nav-link">Certifications</a></li>
@@ -28,20 +54,33 @@
         </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" role="main" id="main-content">
         <div class="profile-section">
             <div class="profile-image-container">
-                <img src="assets/profile-photo.svg" alt="Andrii Zilnyk" class="profile-image">
+                <img src="assets/profile-photo.svg" alt="Andrii Zilnyk - Senior Software Developer" class="profile-image" loading="eager">
             </div>
             <h1 class="profile-name">Andrii Zilnyk</h1>
             <h2 class="profile-title">Senior Software Developer</h2>
             <p class="profile-description">
-                Welcome to my portfolio! Explore my experience and get in touch.
+                Passionate full-stack engineer with 5+ years of experience building scalable web applications. 
+                Specialized in React, Node.js, TypeScript, and cloud technologies. 
+                Always eager to learn new technologies and solve complex problems.
             </p>
+            <div class="profile-actions">
+                <a href="experience.html" class="btn btn-primary">View Experience</a>
+                <a href="contacts.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/navigation.js"></script>
 </body>
