@@ -209,6 +209,23 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-cv {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-cv:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-cv i {
+    margin-right: 8px;
+}
+
 .hero-social {
     display: flex;
     gap: 1rem;
