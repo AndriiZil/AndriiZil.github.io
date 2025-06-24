@@ -146,8 +146,13 @@ body {
     line-height: 1.2;
 }
 
-.highlight {
-    color: #fbbf24;
+.hero-title .highlight {
+    color: #fbbf24 !important;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+    background-color: rgba(251, 191, 36, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
 .hero-subtitle {
