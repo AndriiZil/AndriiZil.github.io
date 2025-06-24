@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Andrii Zilnyk</title>
-    <meta name="description" content="Technical skills of Andrii Zilnyk">
+    <meta name="description" content="Technical skills and technologies of Andrii Zilnyk">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js" class="particles-background"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="particles-js" class="particles-background" aria-hidden="true"></div>
     
-    <nav class="navbar">
-        <button class="hamburger" id="hamburger">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -22,34 +23,41 @@
         <ul class="nav-list" id="nav-list">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="experience.html" class="nav-link">Experience</a></li>
-            <li><a href="skills.html" class="nav-link active">Skills</a></li>
+            <li><a href="skills.html" class="nav-link active" aria-current="page">Skills</a></li>
             <li><a href="certifications.html" class="nav-link">Certifications</a></li>
             <li><a href="contacts.html" class="nav-link">Contacts</a></li>
         </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" role="main" id="main-content">
         <div class="page-section">
             <h1 class="page-title">Skills</h1>
             <p class="page-description">
                 Technologies and tools I work with on a daily basis.
             </p>
             <div class="skills-grid">
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">TypeScript</div>
                 <div class="skill-tag">React</div>
-                <div class="skill-tag">Next.js</div>
+                <div class="skill-tag">TypeScript</div>
                 <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Next.js</div>
+                <div class="skill-tag">GraphQL</div>
                 <div class="skill-tag">AWS</div>
                 <div class="skill-tag">Docker</div>
-                <div class="skill-tag">GraphQL</div>
                 <div class="skill-tag">PostgreSQL</div>
                 <div class="skill-tag">MongoDB</div>
+                <div class="skill-tag">Redis</div>
+                <div class="skill-tag">Jest</div>
                 <div class="skill-tag">Git</div>
             </div>
         </div>
     </main>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>

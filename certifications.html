@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications - Andrii Zilnyk</title>
-    <meta name="description" content="Certifications and courses of Andrii Zilnyk">
+    <meta name="description" content="Professional certifications and courses completed by Andrii Zilnyk">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
 </head>
 <body>
-    <div id="particles-js" class="particles-background"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="particles-js" class="particles-background" aria-hidden="true"></div>
     
-    <nav class="navbar">
-        <button class="hamburger" id="hamburger">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -24,133 +24,116 @@
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="experience.html" class="nav-link">Experience</a></li>
             <li><a href="skills.html" class="nav-link">Skills</a></li>
-            <li><a href="certifications.html" class="nav-link active">Certifications</a></li>
+            <li><a href="certifications.html" class="nav-link active" aria-current="page">Certifications</a></li>
             <li><a href="contacts.html" class="nav-link">Contacts</a></li>
         </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" role="main" id="main-content">
         <div class="certifications-container">
-            <h1 class="page-title">Certifications & Courses</h1>
-            <p class="page-description">
-                Continuous learning is key to staying current in tech. Here are my professional certifications and completed courses.
-            </p>
-
-            <!-- Professional Certifications -->
-            <section class="cert-section">
-                <h2 class="section-title">
+            <div class="cert-section">
+                <h1 class="section-title">
                     <i class="icon-award"></i>
                     Professional Certifications
-                </h2>
+                </h1>
                 <div class="cert-grid">
                     <div class="cert-card">
-                        <h3 class="cert-title">AWS Solutions Architect Associate</h3>
-                        <p class="cert-date">
+                        <h2 class="cert-title">AWS Certified Solutions Architect</h2>
+                        <div class="cert-provider">Amazon Web Services</div>
+                        <div class="cert-date">
                             <i class="icon-calendar"></i>
-                            Issued: March 2024
-                        </p>
+                            Issued: December 2023
+                        </div>
                         <p class="cert-description">
-                            Comprehensive understanding of AWS services and architectural best practices.
+                            Comprehensive understanding of AWS services and architectural best practices for building scalable, secure, and cost-effective cloud solutions.
                         </p>
                         <div class="cert-credential">
                             <i class="icon-external-link"></i>
-                            <span>Credential ID: AWS-123456</span>
+                            Credential ID: AWS-SAA-2023-001
                         </div>
                     </div>
-
+                    
                     <div class="cert-card">
-                        <h3 class="cert-title">Google Cloud Professional Developer</h3>
-                        <p class="cert-date">
+                        <h2 class="cert-title">Google Cloud Professional Developer</h2>
+                        <div class="cert-provider">Google Cloud</div>
+                        <div class="cert-date">
                             <i class="icon-calendar"></i>
-                            Issued: January 2024
-                        </p>
+                            Issued: October 2023
+                        </div>
                         <p class="cert-description">
-                            Advanced application development and deployment on Google Cloud Platform.
+                            Expertise in developing, deploying, and managing applications on Google Cloud Platform using best practices and modern development methodologies.
                         </p>
                         <div class="cert-credential">
                             <i class="icon-external-link"></i>
-                            <span>Credential ID: GCP-789012</span>
+                            Credential ID: GCP-PD-2023-002
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Online Courses -->
-            <section class="cert-section">
+            </div>
+            
+            <div class="cert-section">
                 <h2 class="section-title">
                     <i class="icon-book-open"></i>
-                    Online Courses & Training
+                    Recent Courses & Learning
                 </h2>
                 <div class="courses-grid">
                     <div class="cert-card">
                         <h3 class="cert-title">Advanced React Patterns</h3>
-                        <p class="cert-provider">Frontend Masters</p>
+                        <div class="cert-provider">Frontend Masters</div>
+                        <div class="cert-date">
+                            <i class="icon-calendar"></i>
+                            Completed: January 2024
+                        </div>
                         <p class="cert-description">
-                            Deep dive into React performance optimization and advanced patterns.
+                            Deep dive into advanced React patterns, performance optimization, and modern React development techniques.
                         </p>
-                        <div class="cert-date">Completed: December 2023</div>
                     </div>
-
+                    
                     <div class="cert-card">
-                        <h3 class="cert-title">System Design Interview</h3>
-                        <p class="cert-provider">Educative.io</p>
+                        <h3 class="cert-title">System Design Fundamentals</h3>
+                        <div class="cert-provider">Educative</div>
+                        <div class="cert-date">
+                            <i class="icon-calendar"></i>
+                            Completed: December 2023
+                        </div>
                         <p class="cert-description">
-                            Comprehensive system design principles and interview preparation.
+                            Comprehensive course on designing scalable, distributed systems and understanding system architecture principles.
                         </p>
-                        <div class="cert-date">Completed: November 2023</div>
                     </div>
-
+                    
                     <div class="cert-card">
-                        <h3 class="cert-title">TypeScript Masterclass</h3>
-                        <p class="cert-provider">Udemy</p>
+                        <h3 class="cert-title">TypeScript Advanced Patterns</h3>
+                        <div class="cert-provider">Pluralsight</div>
+                        <div class="cert-date">
+                            <i class="icon-calendar"></i>
+                            Completed: November 2023
+                        </div>
                         <p class="cert-description">
-                            Advanced TypeScript features and best practices for enterprise applications.
+                            Advanced TypeScript concepts including generics, decorators, and advanced type manipulation techniques.
                         </p>
-                        <div class="cert-date">Completed: October 2023</div>
-                    </div>
-
-                    <div class="cert-card">
-                        <h3 class="cert-title">DevOps Fundamentals</h3>
-                        <p class="cert-provider">Coursera</p>
-                        <p class="cert-description">
-                            CI/CD pipelines, containerization, and infrastructure as code.
-                        </p>
-                        <div class="cert-date">Completed: September 2023</div>
-                    </div>
-
-                    <div class="cert-card">
-                        <h3 class="cert-title">GraphQL API Design</h3>
-                        <p class="cert-provider">Apollo GraphQL</p>
-                        <p class="cert-description">
-                            Building efficient and scalable GraphQL APIs with Apollo Server.
-                        </p>
-                        <div class="cert-date">Completed: August 2023</div>
-                    </div>
-
-                    <div class="cert-card">
-                        <h3 class="cert-title">Security Best Practices</h3>
-                        <p class="cert-provider">OWASP</p>
-                        <p class="cert-description">
-                            Web application security and OWASP Top 10 vulnerabilities.
-                        </p>
-                        <div class="cert-date">Completed: July 2023</div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Current Learning -->
-            <section class="cert-section">
-                <h2 class="section-title">Currently Learning</h2>
-                <div class="current-learning">
-                    <h3 class="cert-title">Machine Learning Fundamentals</h3>
-                    <p class="cert-description">
-                        Exploring AI/ML concepts and practical applications in software development.
-                    </p>
-                    <div class="progress-indicator">In Progress • 60% Complete</div>
-                </div>
-            </section>
+            </div>
+            
+            <div class="current-learning">
+                <h3>Currently Learning</h3>
+                <p>Continuous learning is key to staying current in the fast-paced tech industry. I'm currently focused on:</p>
+                <ul>
+                    <li>Advanced Kubernetes and container orchestration</li>
+                    <li>Machine Learning fundamentals with Python</li>
+                    <li>Blockchain development with Solidity</li>
+                </ul>
+                <div class="progress-indicator">In Progress</div>
+            </div>
         </div>
     </main>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
