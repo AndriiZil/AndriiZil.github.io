@@ -3,612 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrii Zilnyk - Senior Software Developer | Full-Stack Engineer</title>
-    <meta name="description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies. View my portfolio, experience, and get in touch for collaboration.">
-    <meta name="keywords" content="software developer, full-stack engineer, React, Node.js, TypeScript, AWS, portfolio">
-    <meta name="author" content="Andrii Zilnyk">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://andriizil.github.io/">
-    <meta property="og:title" content="Andrii Zilnyk - Senior Software Developer">
-    <meta property="og:description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies.">
-    <meta property="og:image" content="https://andriizil.github.io/assets/profile-photo.svg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://andriizil.github.io/">
-    <meta property="twitter:title" content="Andrii Zilnyk - Senior Software Developer">
-    <meta property="twitter:description" content="Senior Software Developer with expertise in React, Node.js, TypeScript, and cloud technologies.">
-    <meta property="twitter:image" content="https://andriizil.github.io/assets/profile-photo.svg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/profile-photo.svg">
-    <link rel="apple-touch-icon" href="assets/profile-photo.svg">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
-    
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Andrii Zilnyk - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="particles-background" id="particles-js"></div>
-    <div class="morphing-shapes"></div>
-    
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <ul class="nav-list" id="nav-list">
-            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-            <li><a href="experience.html" class="nav-link">Experience</a></li>
-            <li><a href="skills.html" class="nav-link">Skills</a></li>
-            <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-            <li><a href="contacts.html" class="nav-link">Contacts</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">AZ</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <main id="main-content" class="main-content">
-        <section class="profile-section glass-card card-3d interactive card-holographic bg-pattern">
-            <div class="profile-image-container floating">
-                <img src="assets/profile-photo.svg" alt="Andrii Zilnyk" class="profile-image">
-            </div>
-            <h1 class="profile-name text-gradient text-glow neon-glow">Andrii Zilnyk</h1>
-            <p class="profile-title text-gradient gradient-animated">Full Stack Developer</p>
-            <p class="profile-description">
-                Passionate developer with expertise in modern web technologies. 
-                Creating innovative solutions and building exceptional user experiences.
-            </p>
-            <div class="profile-actions">
-                <a href="experience.html" class="btn btn-primary btn-advanced interactive btn-neon">
-                    View Experience
-                </a>
-                <a href="contacts.html" class="btn btn-secondary btn-advanced interactive btn-neon">
-                    Get in Touch
-                </a>
-            </div>
-        </section>
-
-        <!-- Quick Stats Section -->
-        <section class="page-section scroll-reveal">
-            <h2 class="page-title text-gradient neon-glow">Quick Overview</h2>
-            <div class="stats-grid">
-                <div class="stat-card glass-card card-3d interactive floating-delayed card-holographic">
-                    <div class="stat-icon">💼</div>
-                    <div class="stat-number text-3d">5+</div>
-                    <div class="stat-label">Years Experience</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Andrii Zilnyk</span>
+                </h1>
+                <h2 class="hero-subtitle">Software Engineer</h2>
+                <p class="hero-description">
+                    I build scalable web applications and solve complex problems with clean, efficient code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="stat-card glass-card card-3d interactive floating-slow card-holographic">
-                    <div class="stat-icon">🚀</div>
-                    <div class="stat-number text-3d">50+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card glass-card card-3d interactive floating card-holographic">
-                    <div class="stat-icon">🎯</div>
-                    <div class="stat-number text-3d">15+</div>
-                    <div class="stat-label">Technologies</div>
+                <div class="hero-social">
+                    <a href="https://github.com/AndriiZil" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/andriizilnyk" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:andrii.zilnyk@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Featured Skills Preview -->
-        <section class="page-section scroll-reveal">
-            <h2 class="page-title text-gradient neon-glow">Featured Skills</h2>
-            <div class="skills-preview">
-                <span class="skill-tag interactive neon-border" data-tooltip="Advanced proficiency">JavaScript</span>
-                <span class="skill-tag interactive neon-border" data-tooltip="Full-stack development">React</span>
-                <span class="skill-tag interactive neon-border" data-tooltip="Backend expertise">Node.js</span>
-                <span class="skill-tag interactive neon-border" data-tooltip="Database management">MongoDB</span>
-                <span class="skill-tag interactive neon-border" data-tooltip="Cloud platforms">AWS</span>
-                <span class="skill-tag interactive neon-border" data-tooltip="DevOps practices">Docker</span>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line">const developer = {</div>
+                    <div class="code-line">  name: "Andrii Zilnyk",</div>
+                    <div class="code-line">  role: "Software Engineer",</div>
+                    <div class="code-line">  skills: ["JavaScript", "React", "Node.js"],</div>
+                    <div class="code-line">  passion: "Building amazing products"</div>
+                    <div class="code-line">};</div>
+                </div>
             </div>
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="skills.html" class="btn btn-secondary btn-advanced interactive btn-neon">
-                    View All Skills
-                </a>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Latest Experience Preview -->
-        <section class="page-section scroll-reveal">
-            <h2 class="page-title text-gradient neon-glow">Latest Experience</h2>
-            <div class="experience-preview">
-                <div class="experience-item glass-card card-3d interactive card-holographic">
-                    <h3 class="experience-title text-gradient gradient-animated">Senior Full Stack Developer</h3>
-                    <p class="experience-period">2023 - Present</p>
-                    <p class="experience-description">
-                        Leading development of scalable web applications using modern technologies.
-                        Mentoring junior developers and implementing best practices.
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate software engineer with 5+ years of experience building web applications 
+                        and solving complex technical challenges. I specialize in full-stack development with 
+                        modern technologies like React, Node.js, and cloud platforms.
                     </p>
+                    <p>
+                        When I'm not coding, you can find me contributing to open-source projects, 
+                        learning new technologies, or sharing knowledge with the developer community.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="experience.html" class="btn btn-primary btn-advanced interactive btn-neon">
-                    View Full Experience
-                </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Scroll to top button -->
-    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="m18 15-6-6-6 6"/>
-        </svg>
-    </button>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with React frontend, Node.js backend, and Stripe payment integration.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time data visualization dashboard with interactive charts and real-time updates.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>D3.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>Cross-platform task management application with real-time collaboration features.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Notification container -->
-    <div id="notification-container"></div>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Software Engineer</h3>
+                            <span class="company">TechCorp Inc.</span>
+                            <span class="period">2022 - Present</span>
+                        </div>
+                        <p>Leading development of microservices architecture and mentoring junior developers. Implemented CI/CD pipelines reducing deployment time by 60%.</p>
+                        <div class="tech-used">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Full Stack Developer</h3>
+                            <span class="company">StartupXYZ</span>
+                            <span class="period">2020 - 2022</span>
+                        </div>
+                        <p>Built and maintained multiple web applications from concept to deployment. Collaborated with cross-functional teams to deliver high-quality products.</p>
+                        <div class="tech-used">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>Heroku</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Junior Developer</h3>
+                            <span class="company">WebSolutions</span>
+                            <span class="period">2019 - 2020</span>
+                        </div>
+                        <p>Developed responsive websites and web applications. Learned modern development practices and tools.</p>
+                        <div class="tech-used">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/navigation.js"></script>
-    <script>
-        // Advanced scroll reveal functionality
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just want to say hello.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>andrii.zilnyk@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/AndriiZil" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/andriizilnyk" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/andriizilnyk" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                }
-            });
-        }, observerOptions);
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Andrii Zilnyk. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        // Observe all scroll-reveal elements
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Advanced particle effects
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            particle.style.animationDelay = Math.random() * 2 + 's';
-            
-            document.body.appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, 5000);
-        }
-
-        // Create particles periodically
-        setInterval(createParticle, 2000);
-
-        // Advanced notification system
-        function showNotification(message, type = 'success') {
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.textContent = message;
-            
-            document.getElementById('notification-container').appendChild(notification);
-            
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 100);
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
-            }, 3000);
-        }
-
-        // Enhanced interactive effects
-        document.querySelectorAll('.interactive').forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            });
-            
-            element.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Advanced loading states
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-            showNotification('Portfolio loaded successfully!', 'success');
-        });
-
-        // Advanced mouse tracking for 3D effects
-        document.addEventListener('mousemove', function(e) {
-            const cards = document.querySelectorAll('.card-3d');
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const cardX = rect.left + rect.width / 2;
-                const cardY = rect.top + rect.height / 2;
-                
-                const deltaX = mouseX - cardX;
-                const deltaY = mouseY - cardY;
-                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-                
-                if (distance < 300) {
-                    const intensity = (300 - distance) / 300;
-                    const rotateX = deltaY * 0.01 * intensity;
-                    const rotateY = -deltaX * 0.01 * intensity;
-                    
-                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-                }
-            });
-        });
-
-        // Advanced ripple effects
-        document.querySelectorAll('.btn-advanced').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.className = 'ripple';
-                ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
-                ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-        // Advanced scroll animations
-        let ticking = false;
-        
-        function updateScrollAnimations() {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.profile-section');
-            
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-            
-            ticking = false;
-        }
-        
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollAnimations);
-                ticking = true;
-            }
-        }
-        
-        window.addEventListener('scroll', requestTick);
-
-        // Advanced keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {
-                document.body.classList.add('keyboard-navigation');
-            }
-        });
-        
-        document.addEventListener('mousedown', function() {
-            document.body.classList.remove('keyboard-navigation');
-        });
-
-        // Advanced performance monitoring
-        if ('performance' in window) {
-            window.addEventListener('load', function() {
-                setTimeout(() => {
-                    const perfData = performance.getEntriesByType('navigation')[0];
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    
-                    if (loadTime > 3000) {
-                        showNotification('Page loaded in ' + Math.round(loadTime) + 'ms', 'warning');
-                    }
-                }, 100);
-            });
-        }
-
-        // Advanced accessibility enhancements
-        function enhanceAccessibility() {
-            // Add focus indicators for keyboard navigation
-            document.querySelectorAll('a, button, .interactive').forEach(element => {
-                element.addEventListener('focus', function() {
-                    this.classList.add('focus-visible');
-                });
-                
-                element.addEventListener('blur', function() {
-                    this.classList.remove('focus-visible');
-                });
-            });
-            
-            // Add ARIA labels for interactive elements
-            document.querySelectorAll('.skill-tag').forEach(tag => {
-                const tooltip = tag.getAttribute('data-tooltip');
-                if (tooltip) {
-                    tag.setAttribute('aria-label', tooltip);
-                }
-            });
-        }
-        
-        enhanceAccessibility();
-
-        // Advanced error handling
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript error:', e.error);
-            showNotification('An error occurred. Please refresh the page.', 'error');
-        });
-
-        // Advanced offline detection
-        window.addEventListener('online', function() {
-            showNotification('You are back online!', 'success');
-        });
-        
-        window.addEventListener('offline', function() {
-            showNotification('You are offline. Some features may not work.', 'warning');
-        });
-
-        // Advanced custom cursor
-        function initCustomCursor() {
-            const cursorDot = document.createElement('div');
-            const cursorRing = document.createElement('div');
-            
-            cursorDot.className = 'cursor-dot';
-            cursorRing.className = 'cursor-ring';
-            
-            document.body.appendChild(cursorDot);
-            document.body.appendChild(cursorRing);
-            
-            let mouseX = 0;
-            let mouseY = 0;
-            let dotX = 0;
-            let dotY = 0;
-            let ringX = 0;
-            let ringY = 0;
-            
-            document.addEventListener('mousemove', function(e) {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-            
-            function animateCursor() {
-                // Smooth dot movement
-                dotX += (mouseX - dotX) * 0.1;
-                dotY += (mouseY - dotY) * 0.1;
-                
-                // Smooth ring movement
-                ringX += (mouseX - ringX) * 0.05;
-                ringY += (mouseY - ringY) * 0.05;
-                
-                cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
-                cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
-                
-                requestAnimationFrame(animateCursor);
-            }
-            
-            animateCursor();
-            
-            // Cursor interactions
-            const interactiveElements = document.querySelectorAll('a, button, .interactive, .card-3d');
-            
-            interactiveElements.forEach(element => {
-                element.addEventListener('mouseenter', function() {
-                    cursorRing.style.transform += ' scale(1.5)';
-                    cursorRing.style.borderColor = 'var(--blue-500)';
-                });
-                
-                element.addEventListener('mouseleave', function() {
-                    cursorRing.style.transform = cursorRing.style.transform.replace(' scale(1.5)', '');
-                    cursorRing.style.borderColor = 'var(--blue-600)';
-                });
-            });
-        }
-        
-        // Initialize custom cursor on desktop
-        if (window.innerWidth > 768) {
-            initCustomCursor();
-        }
-
-        // Advanced scroll animations
-        function initScrollAnimations() {
-            const scrollElements = document.querySelectorAll('.scroll-fade');
-            
-            const scrollObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-            
-            scrollElements.forEach(el => scrollObserver.observe(el));
-        }
-        
-        initScrollAnimations();
-
-        // Advanced morphing shapes interaction
-        function initMorphingShapes() {
-            const morphingShapes = document.querySelector('.morphing-shapes');
-            if (!morphingShapes) return;
-            
-            document.addEventListener('mousemove', function(e) {
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
-                
-                const shapes = morphingShapes.querySelectorAll('::before, ::after');
-                shapes.forEach((shape, index) => {
-                    const speed = (index + 1) * 0.5;
-                    const x = mouseX * speed * 50;
-                    const y = mouseY * speed * 50;
-                    
-                    shape.style.transform = `translate(${x}px, ${y}px)`;
-                });
-            });
-        }
-        
-        initMorphingShapes();
-
-        // Advanced loading states
-        function showLoadingState(element) {
-            const loadingSpinner = document.createElement('div');
-            loadingSpinner.className = 'loading-spinner';
-            loadingSpinner.style.position = 'absolute';
-            loadingSpinner.style.top = '50%';
-            loadingSpinner.style.left = '50%';
-            loadingSpinner.style.transform = 'translate(-50%, -50%)';
-            
-            element.style.position = 'relative';
-            element.appendChild(loadingSpinner);
-            
-            return () => {
-                loadingSpinner.remove();
-            };
-        }
-
-        // Advanced hover effects
-        function initAdvancedHoverEffects() {
-            const cards = document.querySelectorAll('.card-holographic');
-            
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) rotateX(10deg) rotateY(10deg)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) rotateX(0deg) rotateY(0deg)';
-                });
-                
-                card.addEventListener('mousemove', function(e) {
-                    const rect = this.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    
-                    const rotateX = (y - centerY) / 10;
-                    const rotateY = (centerX - x) / 10;
-                    
-                    this.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                });
-            });
-        }
-        
-        initAdvancedHoverEffects();
-
-        // Advanced text effects
-        function initTextEffects() {
-            const neonTexts = document.querySelectorAll('.neon-glow');
-            
-            neonTexts.forEach(text => {
-                text.addEventListener('mouseenter', function() {
-                    this.style.animationDuration = '0.5s';
-                });
-                
-                text.addEventListener('mouseleave', function() {
-                    this.style.animationDuration = '2s';
-                });
-            });
-        }
-        
-        initTextEffects();
-
-        // Advanced performance monitoring
-        function monitorPerformance() {
-            if ('performance' in window) {
-                const observer = new PerformanceObserver((list) => {
-                    list.getEntries().forEach((entry) => {
-                        if (entry.entryType === 'navigation') {
-                            const loadTime = entry.loadEventEnd - entry.loadEventStart;
-                            const domContentLoaded = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
-                            
-                            console.log(`Page load time: ${loadTime}ms`);
-                            console.log(`DOM content loaded: ${domContentLoaded}ms`);
-                            
-                            if (loadTime > 3000) {
-                                showNotification('Page loaded slowly. Consider optimizing images and scripts.', 'warning');
-                            }
-                        }
-                    });
-                });
-                
-                observer.observe({ entryTypes: ['navigation'] });
-            }
-        }
-        
-        monitorPerformance();
-
-        // Advanced accessibility enhancements
-        function enhanceAccessibility() {
-            // Add focus indicators for all interactive elements
-            const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
-            
-            focusableElements.forEach(element => {
-                element.addEventListener('focus', function() {
-                    this.classList.add('focus-ring');
-                });
-                
-                element.addEventListener('blur', function() {
-                    this.classList.remove('focus-ring');
-                });
-            });
-            
-            // Add keyboard navigation for cards
-            const cards = document.querySelectorAll('.card-holographic, .stat-card');
-            
-            cards.forEach(card => {
-                card.setAttribute('tabindex', '0');
-                card.setAttribute('role', 'button');
-                
-                card.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        this.click();
-                    }
-                });
-            });
-        }
-        
-        enhanceAccessibility();
-
-        // Advanced error boundary
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript error:', e.error);
-            showNotification('An error occurred. Please refresh the page.', 'error');
-            
-            // Send error to analytics (if available)
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'exception', {
-                    description: e.error.message,
-                    fatal: false
-                });
-            }
-        });
-
-        // Advanced network status monitoring
-        function monitorNetworkStatus() {
-            if ('connection' in navigator) {
-                navigator.connection.addEventListener('change', function() {
-                    const connection = navigator.connection;
-                    const effectiveType = connection.effectiveType;
-                    const downlink = connection.downlink;
-                    
-                    if (effectiveType === 'slow-2g' || effectiveType === '2g') {
-                        showNotification('Slow connection detected. Some features may be limited.', 'warning');
-                    }
-                    
-                    console.log(`Connection type: ${effectiveType}, Speed: ${downlink} Mbps`);
-                });
-            }
-        }
-        
-        monitorNetworkStatus();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 

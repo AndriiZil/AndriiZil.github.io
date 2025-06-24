@@ -1,176 +1,225 @@
-# Andrii Zilnyk - Senior Software Developer Portfolio
+# Andrii Zilnyk - Software Engineer Portfolio
 
-A modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScript. Features a clean design, smooth animations, and excellent accessibility.
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features a clean design with smooth animations and interactive elements.
 
-## ✨ Features
+## 🚀 Features
 
-- **🎨 Modern Design**: Clean, professional design with glassmorphism effects
-- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **🌙 Dark Mode Support**: Automatically adapts to system preferences
-- **✨ Interactive Animations**: Smooth scroll-triggered animations and hover effects
-- **🎯 Accessibility**: WCAG compliant with keyboard navigation and screen reader support
-- **⚡ Performance**: Optimized loading with service worker for offline capability
-- **🔍 SEO Optimized**: Proper meta tags, structured data, and social media sharing
-- **🎪 Particles Background**: Interactive animated background using particles.js
-
-## 📄 Pages
-
-- **🏠 Home**: Professional introduction with call-to-action buttons
-- **💼 Experience**: Detailed work history and achievements
-- **🛠️ Skills**: Technical skills organized by category
-- **🏆 Certifications**: Professional certifications and completed courses
-- **📞 Contact**: Multiple contact methods with availability status
-
-## 🚀 Getting Started
-
-### Local Development
-```bash
-# Clone the repository
-git clone https://github.com/andriizilnyk/AndriiZil.github.io.git
-
-# Navigate to the project directory
-cd AndriiZil.github.io
-
-# Start local server
-python3 -m http.server 8000
-
-# Open in browser
-open http://localhost:8000
-```
-
-### Deployment
-This is a static website that can be deployed to any hosting service:
-
-- **GitHub Pages**: Push to repository and enable Pages
-- **Netlify**: Drag and drop or connect repository
-- **Vercel**: Connect repository for automatic deployment
-- **Traditional Hosting**: Upload files via FTP
-
-```bash
-  python3 -m http.server 8000
-```
-
-## 🛠️ Technical Stack
-
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript (ES6+)**: Vanilla JS with modern features
-- **Particles.js**: Interactive background animations
-- **Service Worker**: Offline capability and caching
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Interactive Elements**: Hover effects, smooth scrolling, and dynamic content
+- **Contact Form**: Functional contact form with validation
+- **Mobile Navigation**: Hamburger menu for mobile devices
+- **Loading Animation**: Smooth page loading experience
+- **SEO Optimized**: Proper meta tags and semantic HTML
 
 ## 📁 File Structure
 
 ```
-AndriiZil.github.io/
-├── index.html              # Home page
-├── experience.html         # Experience page
-├── skills.html            # Skills page
-├── certifications.html    # Certifications page
-├── contacts.html          # Contact page
-├── sw.js                  # Service worker
-├── css/
-│   └── styles.css         # Main stylesheet
-├── js/
-│   ├── particles.js       # Particles background config
-│   └── navigation.js      # Navigation and interactions
-├── assets/
-│   ├── profile-photo.svg  # Profile image
-│   └── *.svg             # Other SVG assets
-└── README.md              # This file
+portfolio/
+├── index.html          # Main HTML file
+├── styles.css          # CSS styles and responsive design
+├── script.js           # JavaScript functionality
+└── README.md           # Documentation
 ```
 
-## 🎨 Customization
+## 🎨 Sections
 
-### Colors & Theme
-Edit CSS variables in `css/styles.css`:
+1. **Hero Section**: Introduction with animated code display
+2. **About**: Personal information and statistics
+3. **Skills**: Technical skills organized by category
+4. **Projects**: Featured projects with descriptions
+5. **Experience**: Work history timeline
+6. **Contact**: Contact form and information
+
+## 🛠️ Technologies Used
+
+- **HTML5**: Semantic markup
+- **CSS3**: Modern styling with Flexbox and Grid
+- **JavaScript**: Interactive functionality
+- **Font Awesome**: Icons
+- **Google Fonts**: Inter font family
+
+## 🚀 Getting Started
+
+1. **Clone or Download**: Get the files to your local machine
+2. **Open**: Open `index.html` in your web browser
+3. **Customize**: Edit the content to match your information
+
+## ✏️ Customization
+
+### Personal Information
+Edit the following in `index.html`:
+
+```html
+<!-- Update name and title -->
+<h1 class="hero-title">Hi, I'm <span class="highlight">Your Name</span></h1>
+<h2 class="hero-subtitle">Your Title</h2>
+
+<!-- Update contact information -->
+<span>your.email@example.com</span>
+<span>+1 (555) 123-4567</span>
+<span>Your Location</span>
+```
+
+### Social Links
+Update the social media links in the hero and contact sections:
+
+```html
+<a href="https://github.com/YourUsername" target="_blank">
+<a href="https://linkedin.com/in/YourUsername" target="_blank">
+<a href="https://twitter.com/YourUsername" target="_blank">
+```
+
+### Projects
+Replace the project cards with your own projects:
+
+```html
+<div class="project-card">
+    <div class="project-content">
+        <h3>Your Project Name</h3>
+        <p>Project description...</p>
+        <div class="project-tech">
+            <span>Technology 1</span>
+            <span>Technology 2</span>
+        </div>
+        <div class="project-links">
+            <a href="your-demo-link" class="project-link">Live Demo</a>
+            <a href="your-github-link" class="project-link">Code</a>
+        </div>
+    </div>
+</div>
+```
+
+### Skills
+Update the skills section with your technologies:
+
+```html
+<div class="skill-item">
+    <i class="fab fa-js"></i>
+    <span>JavaScript</span>
+</div>
+```
+
+### Experience
+Modify the timeline items with your work history:
+
+```html
+<div class="timeline-item">
+    <div class="timeline-content">
+        <div class="timeline-header">
+            <h3>Your Job Title</h3>
+            <span class="company">Company Name</span>
+            <span class="period">2020 - Present</span>
+        </div>
+        <p>Job description...</p>
+    </div>
+</div>
+```
+
+## 🎨 Styling Customization
+
+### Colors
+The main color scheme can be modified in `styles.css`:
 
 ```css
-:root {
-  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --foreground: #171717;
-  --blue-600: #2563eb;
-  --blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  /* ... other variables */
+/* Primary blue */
+--primary-color: #2563eb;
+
+/* Gradient colors */
+--gradient-start: #667eea;
+--gradient-end: #764ba2;
+
+/* Accent color */
+--accent-color: #fbbf24;
+```
+
+### Fonts
+Change the font family in `styles.css`:
+
+```css
+body {
+    font-family: 'Your-Font', sans-serif;
 }
 ```
 
-### Content Updates
-- **Personal Info**: Update content in HTML files
-- **Profile Image**: Replace `assets/profile-photo.svg`
-- **Contact Details**: Update links in `contacts.html`
-- **Experience**: Modify work history in `experience.html`
+## 📱 Responsive Breakpoints
 
-### Particles Configuration
-Customize background animations in `js/particles.js`:
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: Below 768px
 
-```javascript
-window.particlesJS('particles-js', {
-  particles: {
-    number: { value: 80 },
-    color: { value: ['#3b82f6', '#60a5fa', '#93c5fd'] },
-    // ... other settings
-  }
-});
-```
+## 🔧 JavaScript Features
 
-## 🔧 Browser Support
+- **Mobile Navigation**: Hamburger menu toggle
+- **Smooth Scrolling**: Navigation link scrolling
+- **Form Validation**: Contact form validation
+- **Animations**: Intersection Observer for scroll animations
+- **Notifications**: Success/error message system
+- **Parallax Effect**: Hero section parallax
+- **Counter Animation**: Statistics counting animation
 
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
+## 📧 Contact Form
 
-## 📊 Performance Features
+The contact form includes:
+- Name, email, subject, and message fields
+- Client-side validation
+- Success/error notifications
+- Form reset after submission
 
-- **Service Worker**: Offline capability and resource caching
-- **Resource Preloading**: Critical CSS and fonts preloaded
-- **Optimized Images**: SVG assets for scalability
-- **Debounced Events**: Performance-optimized scroll handlers
-- **Lazy Loading**: Images loaded with proper attributes
+**Note**: The form currently simulates submission. To make it functional, you'll need to:
+1. Set up a backend service (Node.js, PHP, etc.)
+2. Configure email sending (Nodemailer, SendGrid, etc.)
+3. Update the form submission handler in `script.js`
 
-## ♿ Accessibility Features
+## 🌐 Deployment
 
-- **WCAG 2.1 AA Compliant**: Full accessibility support
-- **Keyboard Navigation**: Complete keyboard accessibility
-- **Screen Reader Support**: Proper ARIA labels and roles
-- **Focus Management**: Visible focus indicators
-- **Skip Links**: Quick navigation for assistive technology
-- **Semantic HTML**: Proper heading structure and landmarks
+### GitHub Pages
+1. Push your code to a GitHub repository
+2. Go to Settings > Pages
+3. Select source branch (usually `main`)
+4. Your site will be available at `https://username.github.io/repository-name`
 
-## 🔍 SEO Features
+### Netlify
+1. Drag and drop your project folder to Netlify
+2. Your site will be deployed instantly
+3. Custom domain can be added in settings
 
-- **Meta Tags**: Comprehensive meta descriptions and keywords
-- **Open Graph**: Social media sharing optimization
-- **Twitter Cards**: Twitter-specific meta tags
-- **Structured Data**: Semantic markup for search engines
-- **Sitemap Ready**: Clean URL structure for indexing
+### Vercel
+1. Connect your GitHub repository to Vercel
+2. Deploy automatically on every push
+3. Custom domain support included
 
-## 📱 Mobile Features
+## 🔍 SEO Optimization
 
-- **Touch-Friendly**: 44px minimum touch targets
-- **Responsive Images**: Optimized for all screen sizes
-- **Smooth Scrolling**: Native smooth scroll behavior
-- **Viewport Optimization**: Proper mobile viewport settings
+The portfolio includes:
+- Proper meta tags
+- Semantic HTML structure
+- Alt text for images
+- Open Graph tags
+- Structured data markup
 
-## 🚀 Performance Metrics
+## 📈 Performance
 
-- **Lighthouse Score**: 95+ across all categories
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **First Input Delay**: < 100ms
+- Optimized images and assets
+- Minified CSS and JavaScript (for production)
+- Lazy loading for better performance
+- Efficient animations using CSS transforms
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions, please open an issue.
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## 🙏 Acknowledgments
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- Font Awesome for icons
+- Google Fonts for typography
+- Unsplash for placeholder images
+- Modern CSS techniques and best practices
 
-## 📞 Contact
+---
 
-- **Email**: andrii.zilnyk@gmail.com
-- **LinkedIn**: [linkedin.com/in/andriizilnyk](https://linkedin.com/in/andriizilnyk)
-- **GitHub**: [github.com/andriizilnyk](https://github.com/andriizilnyk)
-- **Twitter**: [@andriizilnyk](https://twitter.com/andriizilnyk) 
+**Built with ❤️ for showcasing software engineering skills** 
