@@ -51,6 +51,11 @@ plain-portfolio/
 - Safari
 - Edge
 
+## Local development
+```bash
+  python3 -m http.server 8000
+```
+
 ## Dependencies
 
 - **Particles.js**: For the interactive background animation (loaded via CDN)

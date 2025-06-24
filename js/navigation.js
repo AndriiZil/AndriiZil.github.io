@@ -1,4 +1,4 @@
-// Navigation active state management
+// Navigation active state management and mobile menu
 document.addEventListener('DOMContentLoaded', function() {
     // Get current page path
     const currentPath = window.location.pathname;
@@ -18,4 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+
+    // Mobile hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+    
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navList.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            }
+        });
+    }
 }); 
