@@ -3,6 +3,22 @@
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features a clean design with smooth animations and interactive elements.
 
 
+## 🚀 Development
+
+To run the website locally with live reload:
+
+1. Make sure you have [Node.js](https://nodejs.org/) installed (v14 or later)
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+The page will automatically open in your default browser and reload when you make changes to any file.
+
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
